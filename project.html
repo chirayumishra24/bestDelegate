@@ -1,0 +1,264 @@
+<div>
+    <div>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </div>
+</div>
+<title></title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="responsive.css" rel="stylesheet" />
+<style type="text/css">
+    body {
+        background: url("/s/articles/6964be4fdf22725adaf29b8a/images/dd.gif") center / cover no-repeat fixed;
+        color: #f1f5f9;
+        min-height: 100vh;
+        position: relative;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(2, 6, 23, 0.50);
+        z-index: -1;
+    }
+
+    .glow-text {
+        text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+    }
+
+    .heading-overlay {
+        position: relative;
+        display: inline-flex;
+        padding: 0.8rem 2.2rem;
+        border-radius: 1rem;
+        isolation: isolate;
+    }
+
+    .heading-overlay::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(15, 23, 42, 0.85);
+        border-radius: inherit;
+        z-index: -1;
+    }
+
+    .card,
+    .card * {
+        background: rgba(30, 41, 59, 0.85) !important;
+        color: #f1f5f9 !important;
+        border-color: rgba(251, 191, 36, 0.3) !important;
+    }
+
+    .card:hover {
+        transform: translateY(-6px) !important;
+        box-shadow: 0 20px 40px rgba(251, 191, 36, 0.2) !important;
+        border-color: #fbbf24 !important;
+    }
+
+    .chapter-card {
+        background: rgba(51, 65, 85, 0.7) !important;
+        border: 1px solid rgba(251, 191, 36, 0.2) !important;
+        transition: all 0.25s ease;
+    }
+
+    .chapter-card:hover {
+        background: rgba(51, 65, 85, 0.95) !important;
+        transform: scale(1.03) !important;
+        border-color: #fbbf24 !important;
+    }
+
+    h1 {
+        font-size: 48px !important;
+    }
+
+    h2,
+    .section-title {
+        font-size: 30px !important;
+    }
+
+    p,
+    li {
+        font-size: 18px !important;
+        line-height: 1.7;
+    }
+</style>
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10"><!-- Header -->
+    <header class="text-center mb-16 pb-10 border-b border-amber-800/50">
+        <h1 class="font-bold text-amber-400 glow-text mb-4"><span class="heading-overlay">Capstone Project: Full MUN
+                Committee Simulation</span></h1>
+    </header>
+    <!-- Project Overview -->
+
+    <div class="card rounded-2xl p-8 mb-12 shadow-2xl">
+        <h2 class="section-title font-semibold text-amber-400 mb-6 pb-3 border-b border-amber-800/50">⭐ Capstone Project
+            Overview</h2>
+
+        <div class="text-lg text-gray-300 space-y-4">
+            <p>This is the final challenge of the entire MUN Training Program.</p>
+
+            <p>You will simulate a complete Model UN committee session from start to finish &mdash; just like a real
+                conference.</p>
+
+            <p class="italic text-amber-200">Prove you can research, speak, negotiate, draft resolutions, lead, and
+                represent your country like a true Best Delegate.</p>
+
+            <p class="text-xl text-amber-300 font-medium mt-6">Submit the link or video recording of your full
+                simulation on LMS</p>
+        </div>
+    </div>
+    <!-- Learning Objectives -->
+
+    <div class="card rounded-2xl p-8 mb-12 shadow-2xl">
+        <h2 class="section-title font-semibold text-amber-400 mb-6 pb-3 border-b border-amber-800/50">🎯 Learning
+            Objectives</h2>
+
+        <p class="text-lg text-gray-300 mb-6">By completing this capstone you will demonstrate mastery of:</p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-gray-800/60 p-6 rounded-xl border border-amber-900/40">Deep country &amp; topic research
+            </div>
+
+            <div class="bg-gray-800/60 p-6 rounded-xl border border-amber-900/40">Writing strong position papers &amp;
+                resolutions</div>
+
+            <div class="bg-gray-800/60 p-6 rounded-xl border border-amber-900/40">Delivering confident, persuasive
+                speeches</div>
+
+            <div class="bg-gray-800/60 p-6 rounded-xl border border-amber-900/40">Effective argumentation, rebuttal
+                &amp; diplomacy</div>
+
+            <div class="bg-gray-800/60 p-6 rounded-xl border border-amber-900/40">Coalition building, negotiation &amp;
+                compromise</div>
+
+            <div class="bg-gray-800/60 p-6 rounded-xl border border-amber-900/40 md:col-span-2">Leading committee,
+                drafting amendments &amp; passing resolutions</div>
+        </div>
+    </div>
+    <!-- Project Requirements -->
+
+    <div class="card rounded-2xl p-8 mb-12 shadow-2xl">
+        <h2 class="section-title font-semibold text-amber-400 mb-8 pb-3 border-b border-amber-800/50">📋 What You Must
+            Submit</h2>
+
+        <div class="space-y-8 text-lg text-gray-300">
+            <div>
+                <h3 class="text-2xl font-bold text-amber-300 mb-4">1. Choose a Real MUN Committee &amp; Agenda</h3>
+
+                <ul class="list-disc list-inside space-y-2 pl-6">
+                    <li>Example: UNGA Third Committee &ndash; Elimination of Racism</li>
+                    <li>Or: UNSC &ndash; Situation in the Middle East</li>
+                    <li>Use real past or current UN agenda topics</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold text-amber-300 mb-4">2. Research &amp; Prepare (Submit these files)</h3>
+
+                <ul class="list-disc list-inside space-y-2 pl-6">
+                    <li>Position Paper (1&ndash;2 pages)</li>
+                    <li>Delegate Research File (key facts, allies, interests)</li>
+                    <li>Opening Speech script (1&ndash;2 min)</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold text-amber-300 mb-4">3. Record or Document the Simulation</h3>
+
+                <ul class="list-disc list-inside space-y-2 pl-6">
+                    <li>Video: Record yourself giving speeches, negotiating, drafting (Zoom/Google Meet with friends or
+                        solo role-play)</li>
+                    <li>OR Written Log: Detailed script of what you said + resolutions/amendments you proposed</li>
+                    <li>Minimum: 15&ndash;20 minutes of active participation</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold text-amber-300 mb-4">4. Final Output</h3>
+
+                <ul class="list-disc list-inside space-y-2 pl-6">
+                    <li>Passed resolution or amendment (even if mock)</li>
+                    <li>Reflection: 300&ndash;500 words on what you learned, challenges faced, how you applied course
+                        concepts</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Tips for Success -->
+
+    <div class="card rounded-2xl p-8 mb-12 shadow-2xl">
+        <h2 class="section-title font-semibold text-amber-400 mb-6 pb-3 border-b border-amber-800/50">Pro Tips to Score
+            Full Marks</h2>
+
+        <ul class="list-disc list-inside text-lg text-gray-300 space-y-3">
+            <li>Use real country policy &mdash; never invent facts</li>
+            <li>Show diplomacy: compromise, build coalitions, avoid aggression</li>
+            <li>Include procedural language: &ldquo;The delegation of&hellip; moves to&hellip;&rdquo;</li>
+            <li>Time yourself &mdash; speeches should be 1&ndash;2 min max</li>
+            <li>Take screenshots or clips of resolution drafting</li>
+            <li>Reflect honestly: what went well? what would you improve?</li>
+        </ul>
+    </div>
+    <!-- Submission Reminder -->
+
+    <div class="text-center mt-16 mb-12">
+        <p class="text-2xl text-amber-300 font-medium mb-6">Ready to shine on the world stage?<br />
+            Submit your full project link/files on LMS</p>
+        <a class="inline-block bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-white font-bold text-xl py-5 px-12 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
+            href="#">Upload Your Capstone Now &rarr; </a>
+    </div>
+</div>
+<!-- Footer -->
+
+<footer class="bg-gray-950 border-t border-amber-800/40 py-10 text-center mt-auto">
+    <div class="max-w-5xl mx-auto px-4">
+        <p class="text-lg text-gray-400 mb-3">&copy; 2026 Skillizee.io | Be the Best Delegate</p>
+
+        <p class="text-sm text-gray-500">Comprehensive Model United Nations Training Program<br />
+            Designed to turn students into global leaders</p>
+    </div>
+</footer>
+<!-- Floating Controls -->
+
+<p><button
+        class="fixed top-4 right-4 z-50 bg-gray-800/90 hover:bg-gray-700 text-amber-300 p-5 rounded-full shadow-xl transition text-3xl"
+        id="fullscreenBtn">⛶</button><button
+        class="fixed bottom-8 left-8 z-50 bg-amber-600 hover:bg-amber-700 text-white p-5 rounded-full shadow-xl transition text-3xl opacity-0 pointer-events-none"
+        id="backToTop">&uarr;</button></p>
+
+<div class="fixed right-4 top-1/2 -translate-y-1/2 z-50 w-3 h-64 bg-gray-700 rounded-full overflow-hidden shadow-lg">
+    <div class="bg-gradient-to-t from-amber-600 to-amber-400 w-full h-0 transition-all duration-200" id="progress">
+        &nbsp;</div>
+</div>
+<script>
+    // Progress bar
+    window.addEventListener('scroll', () => {
+        const scroll = window.scrollY;
+        const total = document.documentElement.scrollHeight - window.innerHeight;
+        const percent = (scroll / total) * 100;
+        document.getElementById('progress').style.height = percent + '%';
+    });
+
+    // Back to Top
+    const backBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        backBtn.classList.toggle('opacity-0', window.scrollY < 400);
+        backBtn.classList.toggle('pointer-events-none', window.scrollY < 400);
+    });
+    backBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Fullscreen
+    document.getElementById('fullscreenBtn').onclick = () => {
+        const elem = document.documentElement;
+        if (!document.fullscreenElement) {
+            if (elem.requestFullscreen) elem.requestFullscreen();
+            else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+            else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
+        } else {
+            if (document.exitFullscreen) document.exitFullscreen();
+            else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+            else if (document.msExitFullscreen) document.msExitFullscreen();
+        }
+    };
+</script>

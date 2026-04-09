@@ -1,0 +1,583 @@
+<div>
+    <div>
+        <div>
+            <div>
+                <div>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<title></title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="responsive.css" rel="stylesheet" />
+<style type="text/css">
+    body {
+        background: url("/s/articles/6968ac3c5a579c21414bd4bf/images/d.gif") center / cover no-repeat fixed;
+        color: #f1f5f9;
+        position: relative;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(2, 6, 23, 0.50);
+        z-index: -1;
+    }
+
+    h1 {
+        font-size: 48px !important;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    textarea {
+        background: #111827;
+        color: #e2e8f0;
+        caret-color: #fbbf24;
+    }
+
+    .quote-block {
+        background: rgba(251, 191, 36, 0.08);
+        border-left: 5px solid #fbbf24;
+        padding: 20px 28px;
+        margin: 32px 0;
+        border-radius: 0 12px 12px 0;
+        font-style: italic;
+        color: #e2e8f0;
+        position: relative;
+    }
+
+    .quote-block::before {
+        content: '“';
+        font-size: 60px;
+        color: #fbbf24;
+        opacity: 0.25;
+        position: absolute;
+        left: 10px;
+        top: -10px;
+        line-height: 1;
+    }
+
+    .heading-overlay {
+        position: relative;
+        display: inline-flex;
+        padding: 0.8rem 2.2rem;
+        border-radius: 1rem;
+        isolation: isolate;
+    }
+
+    .heading-overlay::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(15, 23, 42, 0.85);
+        border-radius: inherit;
+        z-index: -1;
+    }
+
+    /* Ferris wheel animation (if you want to reuse later) */
+    .animate-ferris-wheel {
+        animation: ferris-wheel 120s linear infinite;
+    }
+
+    .counter-rotate {
+        animation: counter-rotate 120s linear infinite reverse;
+    }
+
+    @keyframes ferris-wheel {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes counter-rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(-360deg);
+        }
+    }
+</style>
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10"><!-- Header -->
+    <header class="text-center mb-12 pb-10 border-b border-amber-800/50">
+        <h1 class="font-bold text-amber-400 mb-4"><span class="heading-overlay">Chapter 2.3: Building a Delegate
+                Research File</span></h1>
+    </header>
+
+    <div class="audio-container">
+        <audio controls="" controlslist="nodownload" oncontextmenu="return false;">
+            <source src="https://pa2-cmd.github.io/delegate/d5.mp3" type="audio/mp3" /> Your browser does not support
+            the audio element.
+        </audio>
+    </div>
+    <style type="text/css">
+        .audio-container {
+            position: relative;
+            background: url('https://pa2-cmd.github.io/delegate/Model%20United%20nation%20(3).gif') center center no-repeat;
+            background-size: contain;
+            /* keeps the GIF's aspect ratio */
+            border-radius: 16px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+            margin: 1rem auto;
+            width: 90%;
+            max-width: 900px;
+            aspect-ratio: 1920 / 1080;
+            /* maintain original proportion */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        /* Modern styled audio */
+        .audio-container audio {
+            width: 100%;
+            border-radius: 12px;
+            border: 2px solid #2D2B7E;
+            background: #F5F5FF;
+            height: 50px;
+            padding: 4px;
+            box-shadow: 0 3px 10px rgba(45, 43, 126, 0.3);
+        }
+
+        /* Lavender-toned player controls */
+        audio::-webkit-media-controls-panel {
+            background-color: #E6E6FA;
+            border-radius: 12px;
+        }
+
+        audio::-webkit-media-controls-play-button,
+        audio::-webkit-media-controls-timeline,
+        audio::-webkit-media-controls-current-time-display,
+        audio::-webkit-media-controls-time-remaining-display,
+        audio::-webkit-media-controls-volume-slider {
+            filter: hue-rotate(240deg) saturate(1.2);
+        }
+    </style>
+    <!-- Intro Image + Video -->
+    <div class="bg-gray-900/90 border border-amber-800/40 rounded-2xl p-6 md:p-10 mb-12 shadow-2xl">
+        <div class="mb-8 rounded-xl overflow-hidden shadow-2xl"><img alt="Delegate Research File" class="w-full h-auto"
+                src="/s/articles/69648a779a651d4d8f9e7e39/images/image-20260112111529-1.png" /></div>
+
+        <div class="mb-8 rounded-xl overflow-hidden shadow-2xl"><iframe allowfullscreen="" class="w-full aspect-video"
+                frameborder="0" src="https://www.youtube.com/embed/HOOf_98wIe4?rel=0"
+                title="How to Research | MUN Training"></iframe></div>
+    </div>
+    <!-- Main Research Cockpit Section -->
+
+    <div
+        class="bg-gray-900/90 border border-amber-800/40 rounded-2xl p-6 md:p-10 mb-12 shadow-2xl relative overflow-hidden">
+        <!-- Header with cockpit vibe -->
+        <h2
+            class="text-3xl font-semibold text-amber-400 mb-10 pb-3 border-b border-amber-800/50 text-center tracking-wide">
+            Delegate Research Cockpit <span class="block text-lg font-normal text-amber-400/70 mt-2"> Mission-critical
+                components &amp; organization protocol </span></h2>
+        <!-- Added relevant image -->
+
+        <div class="mb-12"><img
+                alt="MUN delegate organizing research documents, country profiles, notes and maps at preparation desk"
+                class="w-full rounded-xl shadow-2xl border border-amber-800/30" loading="lazy"
+                src="https://blogs.jccc.edu/mun/files/2011/11/DSCN00191.jpg" /></div>
+        <!-- Central Hub (Core) -->
+
+        <div class="relative max-w-5xl mx-auto mb-16">
+            <div
+                class="bg-gradient-to-br from-amber-950/70 via-gray-900/80 to-amber-950/70 border-2 border-amber-600/60 rounded-2xl p-8 md:p-10 shadow-2xl text-center relative z-10">
+                <div class="absolute inset-0 bg-amber-600/5 rounded-2xl pointer-events-none">&nbsp;</div>
+
+                <h3 class="text-2xl md:text-3xl font-bold text-amber-200 mb-6"><span style="font-size:26px;">CORE
+                        HUB</span></h3>
+
+                <p class="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto"><span style="font-size:18px;">Your
+                        country&#39;s identity + agenda topics form the nucleus. Everything else radiates from
+                        here.</span></p>
+            </div>
+            <!-- Radiating spokes / nodes -->
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 relative z-10">
+                <div
+                    class="group relative bg-gray-800/70 rounded-xl border border-amber-800/50 p-6 transition-all duration-400 hover:border-amber-600/70 hover:shadow-xl hover:shadow-amber-900/30 hover:-translate-y-2">
+                    <div
+                        class="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-amber-700 flex items-center justify-center text-white font-bold shadow-lg group-hover:bg-amber-600 transition-colors">
+                        C1</div>
+
+                    <h4 class="text-xl font-semibold text-amber-300 mb-3 pl-8"><span style="font-size:18px;">Country
+                            Profile</span></h4>
+
+                    <p class="text-gray-300 text-sm leading-relaxed"><span style="font-size:18px;">Name, geography,
+                            government structure, key allies &amp; neighbors, recent political/economic
+                            developments</span></p>
+                </div>
+
+                <div
+                    class="group relative bg-gray-800/70 rounded-xl border border-amber-800/50 p-6 transition-all duration-400 hover:border-amber-600/70 hover:shadow-xl hover:shadow-amber-900/30 hover:-translate-y-2">
+                    <div
+                        class="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-amber-700 flex items-center justify-center text-white font-bold shadow-lg group-hover:bg-amber-600 transition-colors">
+                        <span style="font-size:18px;">C2</span></div>
+
+                    <h4 class="text-xl font-semibold text-amber-300 mb-3 pl-8"><span style="font-size:18px;">Topic
+                            Background</span></h4>
+
+                    <p class="text-gray-300 text-sm leading-relaxed"><span style="font-size:18px;">Global/regional
+                            context, statistics, definitions, recent news &amp; developments</span></p>
+                </div>
+
+                <div
+                    class="group relative bg-gray-800/70 rounded-xl border border-amber-800/50 p-6 transition-all duration-400 hover:border-amber-600/70 hover:shadow-xl hover:shadow-amber-900/30 hover:-translate-y-2">
+                    <div
+                        class="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-amber-700 flex items-center justify-center text-white font-bold shadow-lg group-hover:bg-amber-600 transition-colors">
+                        <span style="font-size:18px;">C3</span></div>
+
+                    <h4 class="text-xl font-semibold text-amber-300 mb-3 pl-3" style="text-align:center"><span
+                            style="font-size:18px;">Past International Action</span></h4>
+
+                    <p class="text-gray-300 text-sm leading-relaxed"><span style="font-size:18px;">UN resolutions,
+                            treaties, conventions, your country&rsquo;s voting record &amp; participation</span></p>
+                </div>
+
+                <div
+                    class="group relative bg-gray-800/70 rounded-xl border border-amber-800/50 p-6 transition-all duration-400 hover:border-amber-600/70 hover:shadow-xl hover:shadow-amber-900/30 hover:-translate-y-2">
+                    <div
+                        class="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-amber-700 flex items-center justify-center text-white font-bold shadow-lg group-hover:bg-amber-600 transition-colors">
+                        <span style="font-size:18px;">C4</span></div>
+
+                    <h4 class="text-xl font-semibold text-amber-300 mb-3 pl-8"><span style="font-size:18px;">Country
+                            Policy</span></h4>
+
+                    <p class="text-gray-300 text-sm leading-relaxed"><span style="font-size:18px;">Official statements,
+                            speeches, foreign ministry documents, policy papers</span></p>
+                </div>
+
+                <div
+                    class="group relative bg-gray-800/70 rounded-xl border border-amber-800/50 p-6 transition-all duration-400 hover:border-amber-600/70 hover:shadow-xl hover:shadow-amber-900/30 hover:-translate-y-2">
+                    <div
+                        class="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-amber-700 flex items-center justify-center text-white font-bold shadow-lg group-hover:bg-amber-600 transition-colors">
+                        <span style="font-size:18px;">C5</span></div>
+
+                    <h4 class="text-xl font-semibold text-amber-300 mb-3 pl-8"><span style="font-size:18px;">Possible
+                            Solutions</span></h4>
+
+                    <p class="text-gray-300 text-sm leading-relaxed"><span style="font-size:18px;">Think-tank ideas,
+                            expert papers, op-eds + your own realistic proposals</span></p>
+                </div>
+
+                <div
+                    class="group relative md:col-span-2 lg:col-span-3 bg-gradient-to-r from-amber-950/60 to-gray-900/70 rounded-xl border border-amber-700/50 p-7 transition-all duration-400 hover:border-amber-500/70 hover:shadow-2xl hover:shadow-amber-900/40 hover:-translate-y-2">
+                    <div
+                        class="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center text-white font-bold shadow-md group-hover:bg-amber-500 transition-colors">
+                        <span style="font-size:18px;">C6</span></div>
+
+                    <h4 class="text-xl font-semibold text-amber-200 mb-3 pl-12"><span style="font-size:18px;">Position
+                            Papers &amp; Working Notes</span></h4>
+
+                    <p class="text-gray-300 text-base leading-relaxed"><span style="font-size:18px;">Drafts, working
+                            papers, personal notes for speeches, resolutions, amendments &amp; strategy</span></p>
+                </div>
+            </div>
+        </div>
+        <!-- Best Practices – insight orbs -->
+
+        <div class="mt-16">
+            <h3 class="text-2xl font-semibold text-amber-400 mb-8 text-center">Best Practices &ndash; Insight Protocol
+            </h3>
+
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div
+                    class="group relative bg-gray-800/70 rounded-xl p-6 border border-amber-800/50 shadow-lg hover:shadow-amber-900/30 hover:border-amber-600/60 transition-all duration-400">
+                    <div
+                        class="absolute -top-4 right-4 w-10 h-10 rounded-full bg-amber-700 flex items-center justify-center text-white font-bold shadow-md group-hover:bg-amber-600">
+                        P1</div>
+
+                    <h4 class="text-xl font-semibold text-amber-300 mb-3"><span style="font-size:18px;">Clear
+                            Sectioning</span></h4>
+
+                    <p class="text-gray-300 text-sm leading-relaxed"><span style="font-size:18px;">Physical binder or
+                            digital folder with clearly labeled sections/tabs</span></p>
+                </div>
+
+                <div
+                    class="group relative bg-gray-800/70 rounded-xl p-6 border border-amber-800/50 shadow-lg hover:shadow-amber-900/30 hover:border-amber-600/60 transition-all duration-400">
+                    <div
+                        class="absolute -top-4 right-4 w-10 h-10 rounded-full bg-amber-700 flex items-center justify-center text-white font-bold shadow-md group-hover:bg-amber-600">
+                        <span style="font-size:18px;">P2</span></div>
+
+                    <h4 class="text-xl font-semibold text-amber-300 mb-3"><span style="font-size:18px;">Primary Sources
+                            First</span></h4>
+
+                    <p class="text-gray-300 text-sm leading-relaxed"><span style="font-size:18px;">Prioritize UN docs,
+                            government statements, official reports over secondary sources</span></p>
+                </div>
+
+                <div
+                    class="group relative bg-gray-800/70 rounded-xl p-6 border border-amber-800/50 shadow-lg hover:shadow-amber-900/30 hover:border-amber-600/60 transition-all duration-400">
+                    <div
+                        class="absolute -top-4 right-4 w-10 h-10 rounded-full bg-amber-700 flex items-center justify-center text-white font-bold shadow-md group-hover:bg-amber-600">
+                        P3</div>
+
+                    <h4 class="text-xl font-semibold text-amber-300 mb-3"><span style="font-size:18px;">Live Notes
+                            Zone</span></h4>
+
+                    <p class="text-gray-300 text-sm leading-relaxed"><span style="font-size:18px;">Dedicated blank
+                            pages/digital section for real-time ideas &amp; notes during committee</span></p>
+                </div>
+
+                <div
+                    class="group relative md:col-span-2 bg-gradient-to-r from-amber-950/50 to-gray-900/60 rounded-xl p-7 border border-amber-700/50 shadow-lg hover:shadow-amber-900/40 hover:border-amber-500/60 transition-all duration-400">
+                    <div
+                        class="absolute -top-4 right-4 w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center text-white font-bold shadow-md group-hover:bg-amber-500">
+                        P4</div>
+
+                    <h4 class="text-xl font-semibold text-amber-200 mb-3"><span style="font-size:18px;">Dynamic &amp;
+                            Continuously Updated</span></h4>
+
+                    <p class="text-gray-300 text-base leading-relaxed"><span style="font-size:18px;">Refresh file
+                            regularly as new developments occur &mdash; before and during conference</span></p>
+                </div>
+            </div>
+        </div>
+        <!-- Final quote – dossier stamp style -->
+
+        <div class="mt-16 relative max-w-4xl mx-auto">
+            <div class="absolute inset-0 bg-red-900/10 rounded-2xl rotate-1 scale-[1.02] blur-sm">&nbsp;</div>
+
+            <div class="bg-gray-900/95 border-4 border-red-700/60 rounded-xl p-10 text-center relative shadow-2xl">
+                <div
+                    class="absolute -top-8 left-1/2 -translate-x-1/2 px-8 py-2 bg-red-800 text-white font-bold uppercase text-sm tracking-widest rounded shadow-lg">
+                    CLASSIFIED INSIGHT</div>
+
+                <p class="text-xl md:text-2xl italic font-light text-amber-100 leading-relaxed"><span
+                        style="font-size:18px;">This structure ensures delegates are well-prepared to contribute
+                        meaningfully to debates, negotiate resolutions, and represent their country&rsquo;s interests
+                        effectively.</span></p>
+            </div>
+        </div>
+    </div>
+    <!-- Key Learning Points -->
+
+    <div class="bg-amber-950/30 border border-amber-800/50 rounded-2xl p-6 md:p-10 mb-12 text-center">
+        <h2 class="text-3xl font-semibold text-amber-400 mb-6">Key Learning Points</h2>
+
+        <div class="space-y-4 text-lg text-gray-200">
+            <p>✦ A <strong>Delegate Research File</strong> is your secret weapon &mdash; a structured, organized
+                collection of facts, policies, and ideas for confident participation.</p>
+
+            <p>✦ Include all key sections: Country Profile, Topic Background, Past Action, Country Policy, Solutions,
+                and Notes.</p>
+
+            <p class="font-semibold text-amber-300">Build it early, update it constantly, and use it actively &mdash;
+                it&#39;s the foundation of strong speeches, resolutions, and diplomacy.</p>
+        </div>
+    </div>
+
+    <div class="my-12 bg-gray-900/80 border border-amber-800/50 rounded-2xl overflow-hidden shadow-2xl"><!-- Header -->
+        <div class="bg-gradient-to-r from-amber-900/80 to-amber-800/80 px-6 py-5 text-center">
+            <h3 class="text-2xl md:text-3xl font-bold text-amber-300">Interactive Activity 2.3</h3>
+
+            <p class="text-gray-300 mt-2 text-base md:text-lg">Apply what you&#39;ve learned &mdash; complete the
+                activity below</p>
+        </div>
+        <!-- Taller iframe container – no black space below -->
+
+        <div class="w-full bg-black/40 relative min-h-[520px] sm:min-h-[620px] md:min-h-[720px] lg:min-h-[820px]">
+            <iframe allow="fullscreen" allowfullscreen="" class="absolute inset-0 w-full h-full" frameborder="0"
+                loading="lazy" src="https://chirayumishra24.github.io/mun_activity/activity2.3.html"
+                title="MUN Activity 2.3 - Interactive Exercise"></iframe></div>
+        <!-- Fallback link -->
+
+        <div class="p-6 text-center text-sm md:text-base text-gray-400">
+            <p>If the activity doesn&#39;t load (some LMS or browser settings block iframes), open it directly:</p>
+            <a class="text-amber-400 hover:text-amber-300 underline font-medium mt-2 inline-block transition-colors"
+                href="https://chirayumishra24.github.io/mun_activity/activity2.3.html" rel="noopener noreferrer"
+                target="_blank">Open Activity 2.3 in new tab &rarr; </a>
+        </div>
+    </div>
+    <!-- Surprise Button -->
+
+    <div class="text-center mb-12"><button
+            class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-bold py-4 px-12 rounded-full text-lg shadow-lg transition transform hover:scale-105"
+            id="surpriseBtn">Diplomatic Surprise!</button></div>
+    <!-- Footer -->
+
+    <footer class="text-center py-8 text-gray-400 border-t border-amber-800/40">
+        <p class="text-lg font-medium">Be the Best Delegate | Skillizee.io</p>
+    </footer>
+</div>
+
+<p><button
+        class="fixed top-4 right-4 z-50 bg-gray-800/90 hover:bg-gray-700 text-amber-300 p-5 rounded-full shadow-xl transition text-3xl"
+        id="fullscreenBtn">⛶</button><button
+        class="fixed bottom-8 left-8 z-50 bg-amber-600 hover:bg-amber-700 text-white p-5 rounded-full shadow-xl transition text-3xl opacity-0 pointer-events-none"
+        id="backToTop">&uarr;</button></p>
+
+<div class="fixed right-4 top-1/2 -translate-y-1/2 z-50 w-3 h-64 bg-gray-700 rounded-full overflow-hidden shadow-lg">
+    <div class="bg-gradient-to-t from-amber-600 to-amber-400 w-full h-0 transition-all duration-200" id="progress"
+        style="height: 71.4781%;">&nbsp;</div>
+</div>
+
+<div class="fixed bottom-6 right-6 z-[100] flex flex-col items-end gap-4" id="notes-wrapper"><button
+        class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-bold px-7 py-3.5 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2 text-base md:text-lg"
+        id="notes-toggle"><span>📝 Notes</span></button>
+
+    <div class="hidden w-80 sm:w-[420px] bg-gray-900/95 border border-amber-700/60 rounded-2xl shadow-2xl overflow-hidden"
+        id="notes-panel">
+        <div class="bg-gradient-to-r from-amber-900/80 to-amber-800/80 px-6 py-4 flex justify-between items-center">
+            <h3 class="text-amber-300 font-semibold text-lg">Chapter Notes</h3>
+            <button class="text-amber-300 hover:text-white text-2xl font-bold leading-none"
+                id="notes-close">&times;</button>
+        </div>
+
+        <div class="px-6 py-3 text-sm text-amber-200/80 bg-black/40 border-b border-amber-900/50">Important: Notes are
+            temporary &bull; will be lost on page refresh &bull; download before closing!</div>
+        <textarea
+            class="w-full h-48 p-4 bg-gray-900/70 text-gray-100 border-0 focus:ring-0 resize-none outline-none placeholder-gray-500 text-base leading-relaxed"
+            id="notes-textarea" placeholder="Write your chapter notes here..."></textarea>
+
+        <div class="flex gap-4 px-6 py-5 bg-gray-950/70 border-t border-amber-900/40"><button
+                class="flex-1 bg-amber-700 hover:bg-amber-600 text-white font-medium py-3 rounded-lg transition duration-200"
+                id="notes-download">Download as Word (.doc)</button><button
+                class="px-6 bg-gray-700 hover:bg-gray-600 text-gray-300 rounded-lg transition duration-200"
+                id="notes-clear">Clear</button></div>
+    </div>
+    &lt;
+</div>
+
+<div class="hidden fixed inset-0 bg-black/85 z-[200] flex items-center justify-center px-4" id="surprisePopup">
+    <div class="bg-gray-800 rounded-2xl p-8 max-w-lg w-full text-center border-2 border-amber-600 shadow-2xl">
+        <h2 class="text-3xl font-bold text-amber-400 mb-6">Diplomatic Surprise!</h2>
+
+        <p class="mb-5 text-lg">Joke: Why did the research file go to therapy? It had too many &quot;unresolved
+            issues&quot;!</p>
+
+        <p class="mb-8 text-lg">Fun Fact: The most organized delegate research file in MUN history was 3 inches thick
+            &mdash; and it helped the delegate win Best Delegate in 5 consecutive conferences!</p>
+        <button class="bg-amber-600 hover:bg-amber-700 text-white px-10 py-3 rounded-full font-bold transition"
+            onclick="document.getElementById('surprisePopup').classList.add('hidden')">Close</button>
+    </div>
+</div>
+<script>
+    // Progress bar
+    window.addEventListener('scroll', () => {
+        const scroll = window.scrollY;
+        const total = document.documentElement.scrollHeight - window.innerHeight;
+        const percent = (scroll / total) * 100;
+        document.getElementById('progress').style.height = percent + '%';
+    });
+
+    // Back to Top
+    const backBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        backBtn.classList.toggle('opacity-0', window.scrollY < 400);
+        backBtn.classList.toggle('pointer-events-none', window.scrollY < 400);
+    });
+    backBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Fullscreen
+    document.getElementById('fullscreenBtn').onclick = () => {
+        const elem = document.documentElement;
+        if (!document.fullscreenElement) {
+            if (elem.requestFullscreen) elem.requestFullscreen();
+            else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+            else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
+        } else {
+            if (document.exitFullscreen) document.exitFullscreen();
+            else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+            else if (document.msExitFullscreen) document.msExitFullscreen();
+        }
+    };
+
+    // Surprise Popup
+    document.getElementById('surpriseBtn').onclick = () => {
+        document.getElementById('surprisePopup').classList.remove('hidden');
+    };
+
+    // ────────────────────────────────────────────────
+    // Notes Panel - Now using localStorage for persistence
+    // ────────────────────────────────────────────────
+
+    const notesPanel = document.getElementById('notes-panel');
+    const notesToggle = document.getElementById('notes-toggle');
+    const notesClose = document.getElementById('notes-close');
+    const notesTextarea = document.getElementById('notes-textarea');
+    const notesDownload = document.getElementById('notes-download');
+    const notesClear = document.getElementById('notes-clear');
+
+    // Key used in localStorage (unique per page/chapter)
+    const STORAGE_KEY = 'model-un-chapter-notes-1.1';  // ← change this if you want separate notes per chapter
+
+    // Load saved notes when page loads
+    function loadNotes() {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+            notesTextarea.value = saved;
+        }
+    }
+
+    // Save notes whenever user types (debounced for performance)
+    let saveTimeout;
+    notesTextarea.addEventListener('input', () => {
+        clearTimeout(saveTimeout);
+        saveTimeout = setTimeout(() => {
+            localStorage.setItem(STORAGE_KEY, notesTextarea.value);
+        }, 500); // save after 500ms of no typing
+    });
+
+    // Toggle panel
+    notesToggle.onclick = () => notesPanel.classList.toggle('hidden');
+
+    // Close panel
+    notesClose.onclick = () => notesPanel.classList.add('hidden');
+
+    // Clear notes
+    notesClear.onclick = () => {
+        if (confirm("Clear all notes? This will also remove them from browser storage.")) {
+            notesTextarea.value = "";
+            localStorage.removeItem(STORAGE_KEY);
+        }
+    };
+
+    // Download notes (same as before, but uses current textarea content)
+    notesDownload.onclick = () => {
+        const content = notesTextarea.value.trim();
+        if (!content) {
+            alert("Please write some notes first!");
+            return;
+        }
+
+        const blob = new Blob([
+            `<!DOCTYPE html>
+    <html>
+    <head><meta charset="utf-8"><title>Model UN Chapter Notes</title></head>
+    <body style="font-family:Arial; line-height:1.6; color:#111; padding:40px;">
+      <h1 style="color:#b45309;">Chapter 1.1 - Model UN Notes</h1>
+      <div style="white-space:pre-wrap; margin-top:20px;">${content.replace(/\n/g, '<br>')}</div>
+      <p style="margin-top:40px; font-size:0.9em; color:#666;">
+        Created: ${new Date().toLocaleString()} • Skillizee.io Model UN Course
+      </p>
+    </body>
+    </html>`
+        ], { type: 'text/html' });
+
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `Model-UN-Ch1.1-Notes_${new Date().toISOString().slice(0, 10)}.doc`;
+        a.click();
+        URL.revokeObjectURL(url);
+    };
+
+    // Load notes on page load
+    window.addEventListener('load', loadNotes);
+</script>

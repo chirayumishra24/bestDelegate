@@ -1,0 +1,319 @@
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body * {
+    min-width: 0;
+}
+
+body img,
+body video,
+body iframe,
+body canvas,
+body svg,
+body embed,
+body object {
+    display: block;
+    max-width: 100% !important;
+}
+
+body img,
+body video,
+body canvas,
+body svg {
+    height: auto !important;
+}
+
+body iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+body audio,
+body input,
+body textarea,
+body select,
+body button {
+    max-width: 100%;
+}
+
+body audio {
+    width: 100% !important;
+}
+
+body table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+}
+
+body pre,
+body code {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+body p,
+body li,
+body a,
+body span,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body button,
+body label {
+    overflow-wrap: anywhere;
+}
+
+body .aspect-video {
+    width: 100%;
+    max-width: 100%;
+}
+
+body .aspect-video > iframe,
+body iframe.aspect-video {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+body .heading-overlay,
+body .header-overlay,
+body .section-overlay {
+    max-width: 100%;
+    text-align: center;
+}
+
+body .quote-block {
+    max-width: 100%;
+}
+
+body #courseNavPopup {
+    padding: 1rem;
+}
+
+body #courseNavPopup > div {
+    width: min(100%, 56rem) !important;
+    max-height: min(90vh, 48rem);
+    overflow-y: auto;
+}
+
+body [style*="max-width: 1200px"],
+body [style*="max-width:1200px"],
+body [style*="max-width: 1024px"],
+body [style*="max-width:1024px"],
+body [style*="max-width: 800px"],
+body [style*="max-width:800px"] {
+    max-width: 100% !important;
+}
+
+@media (max-width: 900px) {
+    body h1 {
+        font-size: clamp(2rem, 7vw, 3rem) !important;
+        line-height: 1.12 !important;
+    }
+
+    body h2 {
+        font-size: clamp(1.55rem, 5.4vw, 2.2rem) !important;
+        line-height: 1.2 !important;
+    }
+
+    body h3 {
+        font-size: clamp(1.25rem, 4.6vw, 1.8rem) !important;
+        line-height: 1.25 !important;
+    }
+
+    body h4 {
+        font-size: clamp(1.05rem, 4vw, 1.35rem) !important;
+        line-height: 1.3 !important;
+    }
+
+    body p,
+    body li,
+    body label,
+    body button,
+    body input,
+    body textarea,
+    body select {
+        font-size: clamp(0.98rem, 2.3vw, 1.08rem) !important;
+        line-height: 1.65 !important;
+    }
+
+    body .quote-block {
+        padding: 1rem 1.1rem !important;
+        margin: 1.5rem 0 !important;
+    }
+
+    body .quote-block::before {
+        font-size: 2.8rem !important;
+        left: 0.4rem !important;
+        top: -0.1rem !important;
+    }
+
+    body .heading-overlay,
+    body .header-overlay,
+    body .section-overlay {
+        padding: 0.75rem 1rem !important;
+    }
+
+    body .audio-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0.75rem !important;
+        aspect-ratio: 16 / 9 !important;
+    }
+
+    body .audio-container audio {
+        height: auto !important;
+        min-height: 48px;
+    }
+
+    body [class*="min-w-[280px]"] {
+        min-width: min(100%, 280px) !important;
+    }
+
+    body [style*="font-size: 48px"],
+    body [style*="font-size:48px"] {
+        font-size: clamp(2rem, 7vw, 3rem) !important;
+    }
+
+    body [style*="font-size: 36px"],
+    body [style*="font-size:36px"] {
+        font-size: clamp(1.7rem, 6vw, 2.35rem) !important;
+    }
+
+    body [style*="font-size: 28px"],
+    body [style*="font-size:28px"] {
+        font-size: clamp(1.35rem, 5vw, 1.8rem) !important;
+    }
+
+    body [style*="font-size: 24px"],
+    body [style*="font-size:24px"] {
+        font-size: clamp(1.2rem, 4.5vw, 1.55rem) !important;
+    }
+
+    body [style*="font-size: 20px"],
+    body [style*="font-size:20px"] {
+        font-size: clamp(1.05rem, 4vw, 1.25rem) !important;
+    }
+
+    body [style*="font-size: 18px"],
+    body [style*="font-size:18px"] {
+        font-size: clamp(0.98rem, 2.3vw, 1.08rem) !important;
+    }
+
+    body .opening-wheel-stage {
+        height: auto !important;
+        padding: 0.5rem 0 1.5rem;
+    }
+
+    body .opening-wheel-hub {
+        position: relative !important;
+        inset: auto !important;
+        margin: 0 auto 1rem !important;
+        width: min(13rem, 68vw) !important;
+        height: min(13rem, 68vw) !important;
+    }
+
+    body #wheel {
+        width: min(92vw, 22rem) !important;
+        height: min(92vw, 22rem) !important;
+        margin: 0 auto !important;
+    }
+
+    body #wheel .spoke {
+        height: 11rem !important;
+    }
+
+    body #wheel .hanger {
+        top: calc(50% - 11rem) !important;
+        height: 1.75rem !important;
+    }
+
+    body #wheel .bucket {
+        top: calc(50% - 9.75rem) !important;
+        width: min(9.75rem, 42vw) !important;
+        padding: 0.75rem !important;
+    }
+
+    body #wheel .bucket p {
+        font-size: 0.72rem !important;
+        line-height: 1.35 !important;
+    }
+
+    body .listening-circle-stage {
+        height: auto !important;
+        display: block !important;
+        padding: 0.5rem 0;
+    }
+
+    body .listening-circle-core {
+        position: relative !important;
+        inset: auto !important;
+        margin: 0 auto 1rem !important;
+        width: min(12rem, 65vw) !important;
+        height: min(12rem, 65vw) !important;
+    }
+
+    body .listening-circle-panels {
+        position: static !important;
+        display: grid !important;
+        gap: 1rem !important;
+        margin-top: 1rem !important;
+        pointer-events: auto !important;
+    }
+
+    body .listening-circle-panels .listening-panel {
+        position: static !important;
+        inset: auto !important;
+        width: 100% !important;
+        max-width: none !important;
+        transform: none !important;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        font-size: 16px;
+    }
+
+    body .max-w-5xl,
+    body .max-w-4xl,
+    body .max-w-6xl {
+        width: 100% !important;
+    }
+
+    body [class*="p-8"],
+    body [class*="px-8"] {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    body [class*="min-h-[520px]"] {
+        min-height: 320px !important;
+    }
+
+    body [class*="h-[720px]"] {
+        height: auto !important;
+    }
+
+    body .opening-wheel-stage {
+        overflow-x: clip;
+    }
+}

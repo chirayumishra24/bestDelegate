@@ -1,0 +1,790 @@
+<div>
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <meta charset="UTF-8">
+                                                        <meta name="viewport"
+                                                            content="width=device-width, initial-scale=1.0">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<title></title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="responsive.css" rel="stylesheet" />
+<style type="text/css">
+    h1 {
+        font-size: 48px !important;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    textarea {
+        background: #111827;
+        color: #e2e8f0;
+        caret-color: #fbbf24;
+    }
+
+    .quote-block {
+        background: rgba(251, 191, 36, 0.08);
+        border-left: 5px solid #fbbf24;
+        padding: 20px 28px;
+        margin: 32px 0;
+        border-radius: 0 12px 12px 0;
+        font-style: italic;
+        color: #e2e8f0;
+        position: relative;
+    }
+
+    .quote-block::before {
+        content: '“';
+        font-size: 60px;
+        color: #fbbf24;
+        opacity: 0.25;
+        position: absolute;
+        left: 10px;
+        top: -10px;
+        line-height: 1;
+    }
+
+    body {
+        color: #f1f5f9;
+        background: url("/s/articles/6968ac3c5a579c21414bd4bf/images/a.gif") center center / cover no-repeat fixed;
+        min-height: 100vh;
+        position: relative;
+    }
+
+    /* Dark overlay ABOVE gif, BELOW all content */
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(2, 6, 23, 0.50);
+        /* adjust darkness here */
+        z-index: -1;
+    }
+
+    header h1 {
+        position: relative;
+        display: inline-flex;
+        padding: 0.75rem 2rem;
+        border-radius: 1rem;
+        isolation: isolate;
+    }
+
+    header h1::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(rgba(2, 6, 23, 0.8),
+                rgba(2, 6, 23, 0.8));
+        z-index: -1;
+        border-radius: inherit;
+    }
+
+    .heading-overlay {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 2rem;
+        border-radius: 1rem;
+        isolation: isolate;
+    }
+
+    .heading-overlay::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(2, 6, 23, 0.8);
+        z-index: -1;
+        border-radius: inherit;
+    }
+</style>
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10"><!-- Header -->
+    <header class="text-center mb-12 pb-10 border-b border-amber-800/50">
+        <h1 class="font-bold text-amber-400 mb-4"><span class="heading-overlay">Chapter 1.2: Roles, Ethics, and
+                Protocols of a Delegate </span></h1>
+    </header>
+
+    <div class="audio-container">
+        <audio controls="" controlslist="nodownload" oncontextmenu="return false;">
+            <source src="https://pa2-cmd.github.io/delegate/d2.mp3" type="audio/mp3" /> Your browser does not support
+            the audio element.
+        </audio>
+    </div>
+    <style type="text/css">
+        .audio-container {
+            position: relative;
+            background: url('https://pa2-cmd.github.io/delegate/Model%20United%20nation%20(3).gif') center center no-repeat;
+            background-size: contain;
+            /* keeps the GIF's aspect ratio */
+            border-radius: 16px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+            margin: 1rem auto;
+            width: 90%;
+            max-width: 900px;
+            aspect-ratio: 1920 / 1080;
+            /* maintain original proportion */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        /* Modern styled audio */
+        .audio-container audio {
+            width: 100%;
+            border-radius: 12px;
+            border: 2px solid #2D2B7E;
+            background: #F5F5FF;
+            height: 50px;
+            padding: 4px;
+            box-shadow: 0 3px 10px rgba(45, 43, 126, 0.3);
+        }
+
+        /* Lavender-toned player controls */
+        audio::-webkit-media-controls-panel {
+            background-color: #E6E6FA;
+            border-radius: 12px;
+        }
+
+        audio::-webkit-media-controls-play-button,
+        audio::-webkit-media-controls-timeline,
+        audio::-webkit-media-controls-current-time-display,
+        audio::-webkit-media-controls-time-remaining-display,
+        audio::-webkit-media-controls-volume-slider {
+            filter: hue-rotate(240deg) saturate(1.2);
+        }
+    </style>
+    <!-- Video & Intro Image -->
+    <div class="bg-gray-900/90 border border-amber-800/40 rounded-2xl p-6 md:p-10 mb-12 shadow-2xl">
+        <!-- Centered Image -->
+        <div class="flex justify-center mb-8">
+            <div class="rounded-xl overflow-hidden shadow-2xl max-w-full"><img alt="Delegate Role Illustration"
+                    class="w-full h-auto object-contain" src="/s/articles/6961ed5a5899fa4df33db8bc/images/d1.png"
+                    style="max-width: 800px;" /></div>
+        </div>
+        <!-- YouTube Video -->
+
+        <div class="mb-8 rounded-xl overflow-hidden shadow-2xl"><iframe allowfullscreen="" class="w-full aspect-video"
+                frameborder="0" scrolling="no" src="https://www.youtube.com/embed/_Ax7YSf4pR0?rel=0"></iframe></div>
+    </div>
+    <!-- Main Content Card -->
+
+    <div class="bg-gray-900/90 border border-amber-800/40 rounded-2xl p-6 md:p-10 mb-12 shadow-2xl">
+        <h2 class="text-3xl font-semibold text-amber-400 mb-6 pb-3 border-b border-amber-800/50 text-center">Role of a
+            Delegate</h2>
+        <!-- Larger, centered image -->
+
+        <div class="flex justify-center mb-10">
+            <div class="rounded-xl overflow-hidden shadow-2xl max-w-full"><img alt="What is a delegate expected to do?"
+                    class="w-full max-w-4xl h-auto object-contain"
+                    src="/s/articles/6961ed5a5899fa4df33db8bc/images/d2.png" style="max-width: 1200px;" /></div>
+        </div>
+        <!-- Section Heading -->
+
+        <div class="text-center mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-amber-300 mb-4">Key Responsibilities of a Model UN Delegate
+            </h2>
+
+            <p class="text-gray-300 text-lg max-w-3xl mx-auto">Being an effective delegate requires preparation,
+                strategy, collaboration, and professionalism.</p>
+        </div>
+        <!-- Cards – always 2 per row -->
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8 text-gray-200"><!-- Card 1 -->
+            <div
+                class="bg-gray-900/70 rounded-2xl border border-amber-800/50 shadow-xl hover:shadow-2xl hover:shadow-amber-900/40 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                <div class="p-6 md:p-7">
+                    <div class="flex items-start gap-5"><span class="text-4xl flex-shrink-0 mt-1">🔍</span>
+
+                        <div>
+                            <h4 class="text-xl md:text-2xl font-bold text-amber-300 mb-3">Thorough Research of Your
+                                Country&rsquo;s Position</h4>
+
+                            <p class="text-gray-300 leading-relaxed mb-5">Before the conference even begins, you must
+                                deeply understand your assigned country&rsquo;s official stance, historical votes,
+                                treaties, and national interests on every agenda topic. This is the foundation of
+                                credible and persuasive diplomacy.</p>
+
+                            <div class="border-t border-amber-900/40 pt-5 mt-2">
+                                <p class="mb-3 font-medium text-amber-200">Good research includes:</p>
+
+                                <ul class="list-disc pl-6 space-y-2 text-gray-200 text-sm md:text-base">
+                                    <li>Official government statements &amp; foreign ministry website</li>
+                                    <li>UN voting records &amp; past resolutions</li>
+                                    <li>News articles &amp; think-tank reports from your country&rsquo;s perspective
+                                    </li>
+                                    <li>Alliances and rivalries that influence your position</li>
+                                </ul>
+
+                                <p class="mt-5 italic text-amber-200/80 text-sm md:text-base">Delegates who clearly know
+                                    &ldquo;why&rdquo; their country thinks a certain way speak with much more authority.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+
+            <div
+                class="bg-gray-900/70 rounded-2xl border border-amber-800/50 shadow-xl hover:shadow-2xl hover:shadow-amber-900/40 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                <div class="p-6 md:p-7">
+                    <div class="flex items-start gap-5"><span class="text-4xl flex-shrink-0 mt-1">🗣️</span>
+
+                        <div>
+                            <h4 class="text-xl md:text-2xl font-bold text-amber-300 mb-3">Active Participation in Debate
+                                &amp; Public Speaking</h4>
+
+                            <p class="text-gray-300 leading-relaxed mb-5">Deliver structured speeches, respond to
+                                questions, raise points of information, and remain visible throughout formal debate
+                                sessions. Consistent participation builds influence and shows engagement.</p>
+
+                            <div class="border-t border-amber-900/40 pt-5 mt-2">
+                                <p class="mb-3 font-medium text-amber-200">Tips for strong speeches:</p>
+
+                                <ul class="list-disc pl-6 space-y-2 text-gray-200 text-sm md:text-base">
+                                    <li>Start with a strong hook (statistic, quote, or question)</li>
+                                    <li>Clearly state your country&rsquo;s position early</li>
+                                    <li>Use diplomatic language &mdash; avoid aggression</li>
+                                    <li>End with a call for cooperation or specific action</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+
+            <div
+                class="bg-gray-900/70 rounded-2xl border border-amber-800/50 shadow-xl hover:shadow-2xl hover:shadow-amber-900/40 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                <div class="p-6 md:p-7">
+                    <div class="flex items-start gap-5"><span class="text-4xl flex-shrink-0 mt-1">📝</span>
+
+                        <div>
+                            <h4 class="text-xl md:text-2xl font-bold text-amber-300 mb-3">Collaborative Resolution
+                                Drafting</h4>
+
+                            <p class="text-gray-300 leading-relaxed mb-5">Work together with other delegates &mdash;
+                                especially potential allies &mdash; to write clear, realistic, and politically viable
+                                draft resolutions or working papers that address the committee&rsquo;s agenda.</p>
+
+                            <div class="border-t border-amber-900/40 pt-5 mt-2">
+                                <p class="mb-3 font-medium text-amber-200">Effective resolutions usually:</p>
+
+                                <ul class="list-disc pl-6 space-y-2 text-gray-200 text-sm md:text-base">
+                                    <li>Start with preambulatory clauses (justification)</li>
+                                    <li>Contain operative clauses (actionable steps)</li>
+                                    <li>Balance ambition with political feasibility</li>
+                                    <li>Gain broad co-sponsorship before submission</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+
+            <div
+                class="bg-gray-900/70 rounded-2xl border border-amber-800/50 shadow-xl hover:shadow-2xl hover:shadow-amber-900/40 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                <div class="p-6 md:p-7">
+                    <div class="flex items-start gap-5"><span class="text-4xl flex-shrink-0 mt-1">🎭</span>
+
+                        <div>
+                            <h4 class="text-xl md:text-2xl font-bold text-amber-300 mb-3">Accurate Country
+                                Representation (Role-Play Integrity)</h4>
+
+                            <p class="text-gray-300 leading-relaxed mb-5">Always speak and vote in line with your
+                                assigned country&rsquo;s real foreign policy &mdash; even when you personally disagree.
+                                Authenticity earns respect and makes your arguments more convincing.</p>
+
+                            <div class="border-t border-amber-900/40 pt-5 mt-2">
+                                <p class="mb-3 font-medium text-amber-200">Common mistake to avoid:</p>
+
+                                <p class="italic text-gray-300 text-sm md:text-base">&ldquo;I think we should do X
+                                    because it&rsquo;s morally right&rdquo; &rarr; instead say &ldquo;My country
+                                    believes X because it aligns with our national security / economic interests /
+                                    historical commitments&hellip;&rdquo;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+
+            <div
+                class="bg-gray-900/70 rounded-2xl border border-amber-800/50 shadow-xl hover:shadow-2xl hover:shadow-amber-900/40 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                <div class="p-6 md:p-7">
+                    <div class="flex items-start gap-5"><span class="text-4xl flex-shrink-0 mt-1">🔄</span>
+
+                        <div>
+                            <h4 class="text-xl md:text-2xl font-bold text-amber-300 mb-3">Engagement Across All Stages
+                            </h4>
+
+                            <p class="text-gray-300 leading-relaxed mb-5">Participate actively in moderated debate,
+                                unmoderated caucuses, resolution writing, amendment negotiations, voting procedure, and
+                                follow-up discussions.</p>
+
+                            <div class="border-t border-amber-900/40 pt-5 mt-2">
+                                <p class="italic text-amber-200/90 text-sm md:text-base">Unmoderated caucuses (informal
+                                    lobbying) are often where most real negotiation and alliance-building happens.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+
+            <div
+                class="bg-gray-900/70 rounded-2xl border border-amber-800/50 shadow-xl hover:shadow-2xl hover:shadow-amber-900/40 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                <div class="p-6 md:p-7">
+                    <div class="flex items-start gap-5"><span class="text-4xl flex-shrink-0 mt-1">🌐</span>
+
+                        <div>
+                            <h4 class="text-xl md:text-2xl font-bold text-amber-300 mb-3">Consensus Building &amp;
+                                Alliance Formation</h4>
+
+                            <p class="text-gray-300 leading-relaxed mb-5">Use both formal motions and informal
+                                conversations to create blocs, negotiate compromises, merge drafts, and gain
+                                majority/minimum support for your proposals.</p>
+
+                            <div class="border-t border-amber-900/40 pt-5 mt-2">
+                                <p class="italic text-amber-200/90 text-sm md:text-base">Strong delegates rarely win
+                                    alone &mdash; they build coalitions early and adapt when necessary.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 7 – Full width (spans both columns) -->
+
+            <div
+                class="sm:col-span-2 bg-gradient-to-br from-amber-950/60 to-gray-900/70 rounded-2xl border border-amber-700/50 shadow-2xl hover:shadow-amber-900/50 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                <div class="p-7 md:p-8">
+                    <div class="flex items-start gap-6"><span class="text-5xl flex-shrink-0 mt-1">🛡️</span>
+
+                        <div>
+                            <h4 class="text-2xl md:text-3xl font-bold text-amber-200 mb-4">Uphold Professionalism &amp;
+                                Diplomatic Conduct</h4>
+
+                            <p class="text-gray-200 leading-relaxed text-base md:text-lg mb-5">Maintain respect, use
+                                polite &amp; diplomatic language, listen actively, follow rules of decorum, and treat
+                                every delegate with courtesy &mdash; regardless of disagreement.</p>
+
+                            <div class="border-t border-amber-800/40 pt-5 mt-2">
+                                <p class="mb-4 text-base md:text-lg">Remember: In Model UN &mdash; and real diplomacy
+                                    &mdash; <strong>how you behave often matters more than what you say</strong>.</p>
+
+                                <p class="italic text-amber-200/90 text-base md:text-lg">&ldquo;Diplomacy is the art of
+                                    letting someone else have your way.&rdquo; &ndash; Daniele Vare</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Highlight Quote Block -->
+
+        <div class="quote-block mt-8 italic text-amber-300 text-center text-lg font-medium">A delegate must separate
+            personal beliefs from the position of the country they represent &mdash; embodying professionalism,
+            fairness, and diplomatic courtesy.</div>
+    </div>
+
+    <div class="bg-gray-900/90 border border-amber-800/40 rounded-3xl p-8 md:p-12 mb-12 shadow-2xl">
+        <h2
+            class="text-4xl font-black text-amber-300 mb-12 text-center [text-shadow:_0_2px_10px_rgb(245_158_11_/_0.4)]">
+            MUN Delegate Codex</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"><!-- 1 -->
+            <div class="group relative flex flex-col items-center text-center">
+                <div class="w-28 h-32 relative mb-5">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-amber-700/60 to-amber-900/60 clip-hexagon flex items-center justify-center text-4xl text-white shadow-2xl group-hover:scale-110 transition-transform duration-400">
+                        1</div>
+                </div>
+
+                <h4 class="text-xl font-bold text-amber-200 mb-3">Diplomatic Courtesy</h4>
+
+                <p class="text-gray-300 text-sm leading-relaxed px-4">Respectful language &bull; no personal attacks
+                    &bull; calm under pressure</p>
+            </div>
+            <!-- 2 -->
+
+            <div class="group relative flex flex-col items-center text-center">
+                <div class="w-28 h-32 relative mb-5">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-amber-700/60 to-amber-900/60 clip-hexagon flex items-center justify-center text-4xl text-white shadow-2xl group-hover:scale-110 transition-transform duration-400">
+                        2</div>
+                </div>
+
+                <h4 class="text-xl font-bold text-amber-200 mb-3">Fairness &amp; Compromise</h4>
+
+                <p class="text-gray-300 text-sm leading-relaxed px-4">Open to negotiation &bull; willing to find middle
+                    ground &bull; listens actively</p>
+            </div>
+            <!-- 3 -->
+
+            <div class="group relative flex flex-col items-center text-center">
+                <div class="w-28 h-32 relative mb-5">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-amber-700/60 to-amber-900/60 clip-hexagon flex items-center justify-center text-4xl text-white shadow-2xl group-hover:scale-110 transition-transform duration-400">
+                        3</div>
+                </div>
+
+                <h4 class="text-xl font-bold text-amber-200 mb-3">Procedural Integrity</h4>
+
+                <p class="text-gray-300 text-sm leading-relaxed px-4">Respects Rules of Procedure &bull; follows time
+                    limits &bull; uses motions correctly</p>
+            </div>
+            <!-- 4 -->
+
+            <div class="group relative flex flex-col items-center text-center">
+                <div class="w-28 h-32 relative mb-5">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-amber-700/60 to-amber-900/60 clip-hexagon flex items-center justify-center text-4xl text-white shadow-2xl group-hover:scale-110 transition-transform duration-400">
+                        4</div>
+                </div>
+
+                <h4 class="text-xl font-bold text-amber-200 mb-3">Thorough Preparation</h4>
+
+                <p class="text-gray-300 text-sm leading-relaxed px-4">Researches country policy &bull; studies agenda
+                    topics &bull; knows historical positions</p>
+            </div>
+            <!-- 5 -->
+
+            <div class="group relative flex flex-col items-center text-center">
+                <div class="w-28 h-32 relative mb-5">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-amber-700/60 to-amber-900/60 clip-hexagon flex items-center justify-center text-4xl text-white shadow-2xl group-hover:scale-110 transition-transform duration-400">
+                        5</div>
+                </div>
+
+                <h4 class="text-xl font-bold text-amber-200 mb-3">Proper Speaking Protocol</h4>
+
+                <p class="text-gray-300 text-sm leading-relaxed px-4">Speaks only when recognized &bull; yields time
+                    correctly &bull; no interruptions</p>
+            </div>
+            <!-- 6 -->
+
+            <div class="group relative flex flex-col items-center text-center">
+                <div class="w-28 h-32 relative mb-5">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-amber-700/60 to-amber-900/60 clip-hexagon flex items-center justify-center text-4xl text-white shadow-2xl group-hover:scale-110 transition-transform duration-400">
+                        6</div>
+                </div>
+
+                <h4 class="text-xl font-bold text-amber-200 mb-3">Respectful Interaction</h4>
+
+                <p class="text-gray-300 text-sm leading-relaxed px-4">Addresses Chair properly &bull; thanks delegates
+                    &bull; stays courteous in disagreement</p>
+            </div>
+            <!-- 7 – Highlight (full width) -->
+
+            <div class="sm:col-span-2 lg:col-span-3 group relative flex flex-col items-center text-center mt-6">
+                <div class="w-36 h-40 relative mb-6">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-amber-600 to-amber-800 clip-hexagon flex items-center justify-center text-5xl text-white shadow-2xl group-hover:scale-110 transition-transform duration-400">
+                        7</div>
+                </div>
+
+                <h4 class="text-2xl font-bold text-amber-100 mb-4">Precision &amp; Clarity</h4>
+
+                <p class="text-gray-200 text-base max-w-2xl mx-auto leading-relaxed">Every speech, motion, clause and
+                    amendment should be crystal-clear, concise and strategically worded.</p>
+            </div>
+        </div>
+        <!-- Roles in pill-style badges -->
+
+        <div class="mt-16 flex flex-col md:flex-row gap-6 justify-center items-center">
+            <div
+                class="px-8 py-5 bg-gradient-to-r from-amber-800/50 to-amber-900/50 rounded-full border border-amber-600/40 text-center min-w-[280px] shadow-lg">
+                <span class="text-2xl block mb-2">📌 Main Submitter</span> <span class="text-amber-200/90 text-sm">Owns
+                    the draft &bull; defends it &bull; leads lobbying</span></div>
+
+            <div
+                class="px-8 py-5 bg-gradient-to-r from-amber-800/40 to-amber-900/40 rounded-full border border-amber-600/30 text-center min-w-[280px] shadow-lg">
+                <span class="text-2xl block mb-2">🤝 Co-Submitter</span> <span
+                    class="text-amber-200/90 text-sm">Supports drafting &bull; promotes &bull; adds credibility</span>
+            </div>
+        </div>
+    </div>
+    <style type="text/css">
+        .clip-hexagon {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+    </style>
+    <h3 class="text-2xl md:text-3xl font-bold text-amber-300 mt-14 mb-8 text-center">Additional Delegate Roles in
+        Resolution Writing</h3>
+
+    <div class="grid md:grid-cols-2 gap-6 lg:gap-8"><!-- Main Submitter -->
+        <div
+            class="bg-gradient-to-br from-gray-800/70 to-amber-950/30 p-7 rounded-xl border border-amber-800/50 hover:border-amber-600/70 transition-all duration-300 hover:shadow-xl hover:shadow-amber-900/30">
+            <div class="flex items-center gap-4 mb-4"><span class="text-4xl">📌</span>
+
+                <h4 class="text-xl md:text-2xl font-semibold text-amber-300">Main Submitter / Sponsor</h4>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed">Leads the drafting process, defends the resolution during debate,
+                answers questions, and takes primary responsibility for its content and promotion.</p>
+        </div>
+        <!-- Co-Submitter -->
+
+        <div
+            class="bg-gradient-to-br from-gray-800/70 to-amber-950/30 p-7 rounded-xl border border-amber-800/50 hover:border-amber-600/70 transition-all duration-300 hover:shadow-xl hover:shadow-amber-900/30">
+            <div class="flex items-center gap-4 mb-4"><span class="text-4xl">🤝</span>
+
+                <h4 class="text-xl md:text-2xl font-semibold text-amber-300">Co-Submitter / Signatory</h4>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed">Supports the main submitter by contributing ideas, helping refine
+                language, lobbying for votes, and standing up to defend the resolution when needed.</p>
+        </div>
+    </div>
+    <!-- Final Quote – Enhanced -->
+
+    <div
+        class="mt-12 p-8 bg-gradient-to-r from-amber-950/60 via-gray-900 to-amber-950/60 rounded-2xl border border-amber-700/40 text-center shadow-2xl">
+        <div class="text-5xl text-amber-400/40 mb-4">&ldquo;</div>
+
+        <p class="text-xl md:text-2xl italic text-amber-200 font-light leading-relaxed max-w-4xl mx-auto">Exhibit
+            leadership by guiding collaborations and influencing committee direction diplomatically &mdash; balancing
+            assertiveness with respect to gain trust and votes.</p>
+
+        <div class="text-5xl text-amber-400/40 mt-4 rotate-180">&rdquo;</div>
+    </div>
+</div>
+<!-- MUN Activity 1.2 - Embedded -->
+
+<div class="my-12 bg-gray-900/80 border border-amber-800/50 rounded-2xl overflow-hidden shadow-2xl"><!-- Header -->
+    <div class="bg-gradient-to-r from-amber-900/80 to-amber-800/80 px-6 py-5 text-center">
+        <h3 class="text-2xl md:text-3xl font-bold text-amber-300">Interactive Activity 1.2</h3>
+
+        <p class="text-gray-300 mt-2">Test your understanding with this chapter activity</p>
+    </div>
+    <!-- Responsive Iframe -->
+
+    <div class="aspect-video w-full bg-black/50"><iframe allow="fullscreen" allowfullscreen="" class="w-full h-full"
+            frameborder="0" loading="lazy" src="https://chirayumishra24.github.io/mun_activity/activity1.2.html"
+            title="MUN Activity 1.2 - Interactive Exercise"></iframe></div>
+    <!-- Fallback / Instructions -->
+
+    <div class="p-6 text-center text-sm text-gray-400">
+        <p>If the activity doesn&#39;t load properly (e.g., due to browser restrictions), open it directly:</p>
+        <a class="text-amber-400 hover:text-amber-300 underline font-medium"
+            href="https://chirayumishra24.github.io/mun_activity/activity1.2.html" rel="noopener noreferrer"
+            target="_blank">Open Activity 1.2 in new tab &rarr; </a>
+    </div>
+</div>
+<!-- Optional: Make iframe full-width on mobile -->
+<style type="text/css">
+    @media (max-width: 768px) {
+        .aspect-video {
+            aspect-ratio: 16 / 12;
+            /* Slightly taller on mobile for better readability */
+        }
+    }
+</style>
+<!-- Surprise Button -->
+<div class="text-center mb-12"><button
+        class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-bold py-4 px-12 rounded-full text-lg shadow-lg transition transform hover:scale-105"
+        id="surpriseBtn">Diplomatic Surprise!</button></div>
+<!-- Footer -->
+
+<footer class="text-center py-8 text-gray-400 border-t border-amber-800/40">
+    <p class="text-lg font-medium">Be the Best Delegate | Skillizee.io</p>
+</footer>
+<!-- Floating Controls -->
+
+<p><button
+        class="fixed top-4 right-4 z-50 bg-gray-800/90 hover:bg-gray-700 text-amber-300 p-5 rounded-full shadow-xl transition text-3xl"
+        id="fullscreenBtn">⛶</button><button
+        class="fixed bottom-8 left-8 z-50 bg-amber-600 hover:bg-amber-700 text-white p-5 rounded-full shadow-xl transition text-3xl opacity-0 pointer-events-none"
+        id="backToTop">&uarr;</button></p>
+
+<div class="fixed right-4 top-1/2 -translate-y-1/2 z-50 w-3 h-64 bg-gray-700 rounded-full overflow-hidden shadow-lg">
+    <div class="bg-gradient-to-t from-amber-600 to-amber-400 w-full h-0 transition-all duration-200" id="progress"
+        style="height: 76.3476%;">&nbsp;</div>
+</div>
+<!-- Take Notes Panel -->
+
+<div class="fixed bottom-6 right-6 z-[100] flex flex-col items-end gap-4" id="notes-wrapper"><button
+        class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-bold px-7 py-3.5 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2 text-base md:text-lg"
+        id="notes-toggle"><span>📝 Notes</span></button>
+
+    <div class="hidden w-80 sm:w-[420px] bg-gray-900/95 border border-amber-700/60 rounded-2xl shadow-2xl overflow-hidden"
+        id="notes-panel">
+        <div class="bg-gradient-to-r from-amber-900/80 to-amber-800/80 px-6 py-4 flex justify-between items-center">
+            <h3 class="text-amber-300 font-semibold text-lg">Chapter Notes</h3>
+            <button class="text-amber-300 hover:text-white text-2xl font-bold leading-none"
+                id="notes-close">&times;</button>
+        </div>
+
+        <div class="px-6 py-3 text-sm text-amber-200/80 bg-black/40 border-b border-amber-900/50">
+            <strong>Important:</strong> Notes are temporary &bull; will be lost on page refresh &bull; download before
+            closing!</div>
+        <textarea
+            class="w-full h-48 p-4 bg-gray-900/70 text-gray-100 border-0 focus:ring-0 resize-none outline-none placeholder-gray-500 text-base leading-relaxed"
+            id="notes-textarea" placeholder="Write your chapter notes here..."></textarea>
+
+        <div class="flex gap-4 px-6 py-5 bg-gray-950/70 border-t border-amber-900/40"><button
+                class="flex-1 bg-amber-700 hover:bg-amber-600 text-white font-medium py-3 rounded-lg transition duration-200"
+                id="notes-download">Download as Word (.doc)</button><button
+                class="px-6 bg-gray-700 hover:bg-gray-600 text-gray-300 rounded-lg transition duration-200"
+                id="notes-clear">Clear</button></div>
+    </div>
+</div>
+<!-- Surprise Popup -->
+
+<div class="hidden fixed inset-0 bg-black/85 z-[200] flex items-center justify-center px-4" id="surprisePopup">
+    <div class="bg-gray-800 rounded-2xl p-8 max-w-lg w-full text-center border-2 border-amber-600 shadow-2xl">
+        <h2 class="text-3xl font-bold text-amber-400 mb-6">Diplomatic Surprise!</h2>
+
+        <p class="mb-5 text-lg"><strong>Joke:</strong> Why do Model UN delegates make terrible secret agents? Because
+            they can&#39;t keep anything &quot;classified&quot; &mdash; everything ends up in a resolution!</p>
+
+        <p class="mb-8 text-lg"><strong>Fun Fact:</strong> The term &quot;delegate&quot; comes from Latin
+            &quot;delegatus&quot; meaning &quot;sent&quot; or &quot;appointed&quot; &mdash; exactly what MUN delegates
+            are: official representatives of their nation!</p>
+        <button class="bg-amber-600 hover:bg-amber-700 text-white px-10 py-3 rounded-full font-bold transition"
+            onclick="document.getElementById('surprisePopup').classList.add('hidden')">Close</button>
+    </div>
+</div>
+<script>
+    // Progress bar
+    window.addEventListener('scroll', () => {
+        const scroll = window.scrollY;
+        const total = document.documentElement.scrollHeight - window.innerHeight;
+        const percent = (scroll / total) * 100;
+        document.getElementById('progress').style.height = percent + '%';
+    });
+
+    // Back to Top
+    const backBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        backBtn.classList.toggle('opacity-0', window.scrollY < 400);
+        backBtn.classList.toggle('pointer-events-none', window.scrollY < 400);
+    });
+    backBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Fullscreen
+    document.getElementById('fullscreenBtn').onclick = () => {
+        const elem = document.documentElement;
+        if (!document.fullscreenElement) {
+            if (elem.requestFullscreen) elem.requestFullscreen();
+            else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+            else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
+        } else {
+            if (document.exitFullscreen) document.exitFullscreen();
+            else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+            else if (document.msExitFullscreen) document.msExitFullscreen();
+        }
+    };
+
+    // Surprise Popup
+    document.getElementById('surpriseBtn').onclick = () => {
+        document.getElementById('surprisePopup').classList.remove('hidden');
+    };
+
+    // ────────────────────────────────────────────────
+    // Notes Panel - Now using localStorage for persistence
+    // ────────────────────────────────────────────────
+
+    const notesPanel = document.getElementById('notes-panel');
+    const notesToggle = document.getElementById('notes-toggle');
+    const notesClose = document.getElementById('notes-close');
+    const notesTextarea = document.getElementById('notes-textarea');
+    const notesDownload = document.getElementById('notes-download');
+    const notesClear = document.getElementById('notes-clear');
+
+    // Key used in localStorage (unique per page/chapter)
+    const STORAGE_KEY = 'model-un-chapter-notes-1.1';  // ← change this if you want separate notes per chapter
+
+    // Load saved notes when page loads
+    function loadNotes() {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+            notesTextarea.value = saved;
+        }
+    }
+
+    // Save notes whenever user types (debounced for performance)
+    let saveTimeout;
+    notesTextarea.addEventListener('input', () => {
+        clearTimeout(saveTimeout);
+        saveTimeout = setTimeout(() => {
+            localStorage.setItem(STORAGE_KEY, notesTextarea.value);
+        }, 500); // save after 500ms of no typing
+    });
+
+    // Toggle panel
+    notesToggle.onclick = () => notesPanel.classList.toggle('hidden');
+
+    // Close panel
+    notesClose.onclick = () => notesPanel.classList.add('hidden');
+
+    // Clear notes
+    notesClear.onclick = () => {
+        if (confirm("Clear all notes? This will also remove them from browser storage.")) {
+            notesTextarea.value = "";
+            localStorage.removeItem(STORAGE_KEY);
+        }
+    };
+
+    // Download notes (same as before, but uses current textarea content)
+    notesDownload.onclick = () => {
+        const content = notesTextarea.value.trim();
+        if (!content) {
+            alert("Please write some notes first!");
+            return;
+        }
+
+        const blob = new Blob([
+            `<!DOCTYPE html>
+    <html>
+    <head><meta charset="utf-8"><title>Model UN Chapter Notes</title></head>
+    <body style="font-family:Arial; line-height:1.6; color:#111; padding:40px;">
+      <h1 style="color:#b45309;">Chapter 1.1 - Model UN Notes</h1>
+      <div style="white-space:pre-wrap; margin-top:20px;">${content.replace(/\n/g, '<br>')}</div>
+      <p style="margin-top:40px; font-size:0.9em; color:#666;">
+        Created: ${new Date().toLocaleString()} • Skillizee.io Model UN Course
+      </p>
+    </body>
+    </html>`
+        ], { type: 'text/html' });
+
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `Model-UN-Ch1.1-Notes_${new Date().toISOString().slice(0, 10)}.doc`;
+        a.click();
+        URL.revokeObjectURL(url);
+    };
+
+    // Load notes on page load
+    window.addEventListener('load', loadNotes);
+</script>

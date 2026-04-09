@@ -1,0 +1,655 @@
+<div>
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <meta charset="UTF-8">
+                                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<title></title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="responsive.css" rel="stylesheet" />
+<style type="text/css">
+    :root {
+        --amber-glow: #fbbf24;
+        --dark-bg: #0f172a;
+    }
+
+    body {
+        color: #f1f5f9;
+        background: url("/s/articles/6964be4fdf22725adaf29b8a/images/dd.gif") center center / cover no-repeat fixed;
+        margin: 0;
+        overflow-x: hidden;
+        font-family: 'Segoe UI', system-ui, sans-serif;
+    }
+
+    .glow-text {
+        text-shadow: 0 0 20px rgba(251, 191, 36, 0.7), 0 0 40px rgba(251, 191, 36, 0.4);
+    }
+
+    .learn-card,
+    .module-card,
+    .chapter-card {
+        background: rgba(30, 41, 59, 0.9);
+        border: 1px solid rgba(251, 191, 36, 0.35);
+        transition: all 0.3s ease;
+    }
+
+    .learn-card:hover,
+    .module-card:hover,
+    .chapter-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 50px rgba(251, 191, 36, 0.3);
+        border-color: var(--amber-glow);
+    }
+
+    .header-overlay,
+    .section-overlay {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 2.5rem;
+        border-radius: 1.25rem;
+        background: rgba(30, 41, 59, 0.7);
+        backdrop-filter: blur(8px);
+    }
+
+    /* Intro – always visible on every load */
+    #intro {
+        position: fixed;
+        inset: 0;
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        opacity: 1;
+        transition: opacity 1.8s ease;
+    }
+
+    #intro.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .gif-bg {
+        position: absolute;
+        inset: 0;
+        background: url('/s/articles/6968ac3c5a579c21414bd4bf/images/m.gif') center center / contain no-repeat;
+        z-index: 1;
+    }
+
+    .intro-content {
+        text-align: center;
+        max-width: 90%;
+        padding: 2rem;
+        position: relative;
+        z-index: 20;
+        /* Above overlay */
+    }
+
+    .intro-title {
+        font-weight: 800;
+        color: #ffffff;
+        text-shadow: 0 0 40px rgba(251, 191, 36, 0.9), 0 0 60px rgba(251, 191, 36, 0.6);
+        opacity: 0;
+        transform: translateY(80px);
+        animation: titleReveal 2.5s ease forwards 0.6s;
+    }
+
+    .intro-subtitle {
+        color: var(--amber-glow);
+        margin-top: 1.8rem;
+        text-shadow: 0 0 30px rgba(251, 191, 36, 0.8), 0 0 50px rgba(251, 191, 36, 0.5);
+        opacity: 0;
+        animation: fadeInUp 2.2s ease forwards 2.2s;
+    }
+
+    .loading-progress {
+        width: clamp(240px, 65%, 420px);
+        height: 8px;
+        background: rgba(251, 191, 36, 0.15);
+        border-radius: 4px;
+        margin: 3rem auto 0;
+        overflow: hidden;
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards 3.8s;
+    }
+
+    .loading-bar {
+        width: 0%;
+        height: 100%;
+        background: linear-gradient(to right, var(--amber-glow), #f59e0b);
+        animation: loading 6s ease forwards 4.5s;
+    }
+
+    @keyframes titleReveal {
+        0% {
+            opacity: 0;
+            transform: translateY(80px) scale(0.8);
+        }
+
+        60% {
+            opacity: 1;
+            transform: translateY(-12px) scale(1.04);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(60px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0.85;
+        }
+    }
+
+    @keyframes loading {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+
+    #main-content {
+        opacity: 0;
+        transition: opacity 1.5s ease;
+    }
+
+    #main-content.visible {
+        opacity: 1;
+    }
+
+    /* Image centering */
+    .image-center {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .image-center img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Fullscreen button – highest z-index, always on top */
+    #fullscreenBtn {
+        z-index: 10000 !important;
+    }
+
+    .learn-card:hover {
+        transform: translateY(-8px);
+        border-color: #fbbf24;
+    }
+</style>
+<div id="intro"><!-- Layers -->
+    <div class="absolute inset-0 bg-black/75 z-10">&nbsp;</div>
+
+    <div class="absolute inset-0 gif-bg z-5">&nbsp;</div>
+
+    <div class="intro-content">
+        <h1 class="intro-title text-5xl md:text-6xl lg:text-7xl font-extrabold">Welcome to How to become Best Delegate
+            in any MUN</h1>
+
+        <p class="intro-subtitle text-2xl md:text-3xl lg:text-4xl font-semibold mt-8">Your journey to diplomacy,
+            leadership and global impact begins now</p>
+
+        <div class="loading-progress">
+            <div class="loading-bar">&nbsp;</div>
+        </div>
+    </div>
+    <!-- ← Add the audio tag HERE -->
+
+    <audio id="introMusic" preload="auto">
+        <source src="https://pa2-cmd.github.io/delegate/entry.mp3" type="audio/mpeg" />
+    </audio>
+</div>
+<!-- Fullscreen Button – Always on top -->
+
+<p><button
+        class="fixed top-4 right-4 z-[10000] bg-gray-800/90 hover:bg-gray-700 text-amber-300 p-5 rounded-full shadow-xl transition text-3xl"
+        id="fullscreenBtn">⛶</button></p>
+
+<div class="flex-grow" id="main-content">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16"><!-- Hero -->
+        <header class="text-center mb-16 header-overlay rounded-2xl p-10">
+            <h1 class="glow-text text-5xl md:text-6xl font-extrabold mb-8">Welcome to How to become Best Delegate in any
+                MUN</h1>
+
+            <p class="text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">Hello, future
+                diplomats!<br />
+                Get ready for an immersive journey into global governance, international relations, diplomacy, and
+                leadership.</p>
+        </header>
+        <!-- Welcome Message -->
+
+        <section class="bg-gray-900/80 border border-amber-800/40 rounded-2xl p-8 md:p-12 mb-16 shadow-2xl text-center">
+            <p class="text-xl text-gray-200 leading-relaxed">This program is designed to transform you into a confident,
+                research-driven, and negotiation-ready delegate who can <strong>excel</strong> in any Model United
+                Nations conference.</p>
+        </section>
+        <!-- What You Will Learn -->
+
+        <section class="mb-20">
+            <h2 class="text-center mb-12"><span
+                    class="section-overlay text-4xl md:text-5xl font-bold text-amber-400 px-8 py-4">What You Will Learn
+                </span></h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"><!-- Card 1: Understanding the UN & MUN -->
+                <div
+                    class="learn-card rounded-xl p-8 text-center bg-gray-900/70 border border-amber-800/40 shadow-xl hover:shadow-amber-900/40 transition-all">
+                    <img alt="United Nations Headquarters"
+                        class="w-24 h-24 mx-auto rounded-full object-cover border-4 border-amber-600 shadow-lg mb-6"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Midtown_Manhattan_Skyline_004_%28cropped%29.jpg/1280px-Midtown_Manhattan_Skyline_004_%28cropped%29.jpg" />
+                    <h3 class="text-2xl font-bold text-amber-300 mb-4">Understanding the UN &amp; MUN</h3>
+
+                    <p class="text-gray-300">History, structure, purpose, and how MUN simulates real diplomacy</p>
+                </div>
+                <!-- Card 2: Delegate Roles, Ethics & Protocols -->
+
+                <div
+                    class="learn-card rounded-xl p-8 text-center bg-gray-900/70 border border-amber-800/40 shadow-xl hover:shadow-amber-900/40 transition-all">
+                    <img alt="Delegate speaking at UN podium"
+                        class="w-24 h-24 mx-auto rounded-full object-cover border-4 border-amber-600 shadow-lg mb-6"
+                        src="https://images.wsj.net/im-96419665?width=1280&amp;size=1.77777778" />
+                    <h3 class="text-2xl font-bold text-amber-300 mb-4">Delegate Roles, Ethics &amp; Protocols</h3>
+
+                    <p class="text-gray-300">How to behave, speak, and represent your country with integrity</p>
+                </div>
+                <!-- Card 3: Country & Agenda Research -->
+
+                <div
+                    class="learn-card rounded-xl p-8 text-center bg-gray-900/70 border border-amber-800/40 shadow-xl hover:shadow-amber-900/40 transition-all">
+                    <img alt="Detailed world map with flags and research elements"
+                        class="w-24 h-24 mx-auto rounded-full object-cover border-4 border-amber-600 shadow-lg mb-6"
+                        src="https://images.squarespace-cdn.com/content/v1/5a317986aeb6255dd87994e4/81363015-1302-4ee6-8778-f9855a036a64/img+02+full+map.jpg" />
+                    <h3 class="text-2xl font-bold text-amber-300 mb-4">Country &amp; Agenda Research</h3>
+
+                    <p class="text-gray-300">In-depth research techniques that make you unbeatable</p>
+                </div>
+                <!-- Card 4: Position Papers & Speeches -->
+
+                <div
+                    class="learn-card rounded-xl p-8 text-center bg-gray-900/70 border border-amber-800/40 shadow-xl hover:shadow-amber-900/40 transition-all">
+                    <img alt="Delegates working on documents at MUN table"
+                        class="w-24 h-24 mx-auto rounded-full object-cover border-4 border-amber-600 shadow-lg mb-6"
+                        src="https://miro.medium.com/0*uG1nTKCs8afzjvka.jpg" />
+                    <h3 class="text-2xl font-bold text-amber-300 mb-4">Position Papers &amp; Speeches</h3>
+
+                    <p class="text-gray-300">Writing powerful papers and delivering award-winning speeches</p>
+                </div>
+                <!-- Card 5: Debate, Rebuttal & Public Speaking -->
+
+                <div
+                    class="learn-card rounded-xl p-8 text-center bg-gray-900/70 border border-amber-800/40 shadow-xl hover:shadow-amber-900/40 transition-all">
+                    <img alt="Model UN committee debate session"
+                        class="w-24 h-24 mx-auto rounded-full object-cover border-4 border-amber-600 shadow-lg mb-6"
+                        src="https://bestdelegate.com/wp-content/uploads/2021/11/MUN-Conference-scaled.jpeg" />
+                    <h3 class="text-2xl font-bold text-amber-300 mb-4">Debate, Rebuttal &amp; Public Speaking</h3>
+
+                    <p class="text-gray-300">Master argumentation, rebuttals, active listening, and diplomacy</p>
+                </div>
+                <!-- Card 6: Negotiation & Resolution Writing -->
+
+                <div
+                    class="learn-card rounded-xl p-8 text-center bg-gray-900/70 border border-amber-800/40 shadow-xl hover:shadow-amber-900/40 transition-all">
+                    <img alt="Delegates negotiating around table with map"
+                        class="w-24 h-24 mx-auto rounded-full object-cover border-4 border-amber-600 shadow-lg mb-6"
+                        src="https://www.notion.so/image/https:%2F%2Fcdn.outrank.so%2F26b93a39-4f22-4e85-8ab8-2a0021e122b2%2Ffeatured-image-7fd0ec3d-63e3-464f-bfe0-a8ca8b598c51.jpg?table=block&amp;id=2824ac7d-35fa-8147-bb63-eea3907e416b&amp;cache=v2" />
+                    <h3 class="text-2xl font-bold text-amber-300 mb-4">Negotiation &amp; Resolution Writing</h3>
+
+                    <p class="text-gray-300">Coalition building, drafting, amendments, and leadership</p>
+                </div>
+            </div>
+        </section>
+        <!-- Course Structure -->
+
+        <section class="mb-20">
+            <h2 class="text-center mb-12"><span
+                    class="section-overlay text-4xl md:text-5xl font-bold text-amber-400 px-8 py-4">Course Structure
+                </span></h2>
+
+            <div class="space-y-16"><!-- Module 1 -->
+                <div class="module-card rounded-2xl p-8 md:p-10 shadow-xl">
+                    <h3 class="text-3xl md:text-4xl font-bold text-amber-400 mb-8 text-center md:text-left">Module 1:
+                        Understanding MUN &amp; the Delegate Role</h3>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="chapter-card p-6 rounded-xl">
+                            <h4 class="text-xl font-semibold text-amber-300 mb-3">Chapter 1</h4>
+
+                            <p class="text-gray-300">What is Model UN? Structure &amp; Purpose</p>
+                        </div>
+
+                        <div class="chapter-card p-6 rounded-xl">
+                            <h4 class="text-xl font-semibold text-amber-300 mb-3">Chapter 2</h4>
+
+                            <p class="text-gray-300">Roles, Ethics, and Protocols of a Delegate</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Module 2 -->
+
+                <div class="module-card rounded-2xl p-8 md:p-10 shadow-xl">
+                    <h3 class="text-3xl md:text-4xl font-bold text-amber-400 mb-8 text-center md:text-left">Module 2:
+                        Research and Conference Preparation</h3>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="chapter-card p-6 rounded-xl">
+                            <h4 class="text-xl font-semibold text-amber-300 mb-3">Chapter 1</h4>
+
+                            <p class="text-gray-300">In-depth Country and Agenda Research</p>
+                        </div>
+
+                        <div class="chapter-card p-6 rounded-xl">
+                            <h4 class="text-xl font-semibold text-amber-300 mb-3">Chapter 2</h4>
+
+                            <p class="text-gray-300">Position Papers and Opening Statements</p>
+                        </div>
+
+                        <div class="chapter-card p-6 rounded-xl">
+                            <h4 class="text-xl font-semibold text-amber-300 mb-3">Chapter 3</h4>
+
+                            <p class="text-gray-300">Building a Strong Delegate Research File</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Module 3 -->
+
+                <div class="module-card rounded-2xl p-8 md:p-10 shadow-xl">
+                    <h3 class="text-3xl md:text-4xl font-bold text-amber-400 mb-8 text-center md:text-left">Module 3:
+                        Debate, Public Speaking, and Diplomacy</h3>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="chapter-card p-6 rounded-xl">
+                            <h4 class="text-xl font-semibold text-amber-300 mb-3">Chapter 1</h4>
+
+                            <p class="text-gray-300">Crafting &amp; Delivering Effective Speeches</p>
+                        </div>
+
+                        <div class="chapter-card p-6 rounded-xl">
+                            <h4 class="text-xl font-semibold text-amber-300 mb-3">Chapter 2</h4>
+
+                            <p class="text-gray-300">Argumentation, Rebuttal, Active Listening &amp; Diplomacy</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Module 4 -->
+
+                <div class="module-card rounded-2xl p-8 md:p-10 shadow-xl">
+                    <h3 class="text-3xl md:text-4xl font-bold text-amber-400 mb-8 text-center md:text-left">Module 4:
+                        Negotiation, Resolution Writing &amp; Leadership</h3>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="chapter-card p-6 rounded-xl">
+                            <h4 class="text-xl font-semibold text-amber-300 mb-3">Chapter 1</h4>
+
+                            <p class="text-gray-300">Coalition Building and Teamwork</p>
+                        </div>
+
+                        <div class="chapter-card p-6 rounded-xl">
+                            <h4 class="text-xl font-semibold text-amber-300 mb-3">Chapter 2</h4>
+
+                            <p class="text-gray-300">Negotiations, Drafting Resolutions &amp; Making Amendments</p>
+                        </div>
+
+                        <div class="chapter-card p-6 rounded-xl">
+                            <h4 class="text-xl font-semibold text-amber-300 mb-3">Chapter 3</h4>
+
+                            <p class="text-gray-300">Leading in Committee &amp; Standing Out as Best Delegate</p>
+                        </div>
+
+                        <div class="chapter-card p-6 rounded-xl">
+                            <h4 class="text-xl font-semibold text-amber-300 mb-3">Chapter 4</h4>
+
+                            <p class="text-gray-300">Resolution Criteria &amp; Awards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Certification Prerequisites -->
+
+        <section class="mb-16">
+            <h2 class="text-center mb-8"><span
+                    class="section-overlay text-4xl font-bold text-amber-400 px-8 py-4">Certification Prerequisites
+                </span></h2>
+
+            <div
+                class="bg-amber-950/40 border border-amber-700/50 rounded-2xl p-10 shadow-2xl text-center max-w-5xl mx-auto">
+                <p class="text-xl text-gray-200 mb-10">To unlock your <strong>Certificate of Completion</strong> you
+                    must complete:</p>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"><!-- Card 1 -->
+                    <div
+                        class="bg-amber-900/30 border border-amber-600/40 rounded-xl p-6 hover:border-amber-500/60 transition-all duration-300 flex flex-col items-center justify-center shadow-lg">
+                        <div class="text-5xl mb-4">📚</div>
+
+                        <h3 class="text-xl font-bold text-amber-300 mb-2">All Lessons</h3>
+
+                        <p class="text-gray-300 text-sm">100% course content completed</p>
+                    </div>
+                    <!-- Card 2 -->
+
+                    <div
+                        class="bg-amber-900/30 border border-amber-600/40 rounded-xl p-6 hover:border-amber-500/60 transition-all duration-300 flex flex-col items-center justify-center shadow-lg">
+                        <div class="text-5xl mb-4">✅</div>
+
+                        <h3 class="text-xl font-bold text-amber-300 mb-2">All Quizzes</h3>
+
+                        <p class="text-gray-300 text-sm">Minimum passing score on each (above 70%)</p>
+                    </div>
+                    <!-- Card 3 -->
+
+                    <div
+                        class="bg-amber-900/30 border border-amber-600/40 rounded-xl p-6 hover:border-amber-500/60 transition-all duration-300 flex flex-col items-center justify-center shadow-lg">
+                        <div class="text-5xl mb-4">📝</div>
+
+                        <h3 class="text-xl font-bold text-amber-300 mb-2">Assignments</h3>
+
+                        <p class="text-gray-300 text-sm">All submitted &amp; approved</p>
+                    </div>
+                    <!-- Card 4 -->
+
+                    <div
+                        class="bg-amber-900/30 border border-amber-600/40 rounded-xl p-6 hover:border-amber-500/60 transition-all duration-300 flex flex-col items-center justify-center shadow-lg">
+                        <div class="text-5xl mb-4">🏗️</div>
+
+                        <h3 class="text-xl font-bold text-amber-300 mb-2">Capstone Project</h3>
+
+                        <p class="text-gray-300 text-sm">Final project submitted &amp; passed</p>
+                    </div>
+                </div>
+
+                <p class="text-lg text-amber-300 mt-12 font-medium">Once all four are done &rarr; your certificate
+                    unlocks automatically!</p>
+            </div>
+        </section>
+        <!-- CTA -->
+
+        <div class="text-center mb-16"><button
+                class="inline-block bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-white font-bold text-2xl py-6 px-16 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
+                onclick="showTrashJoke()">Start Your MUN Journey Now &rarr;</button></div>
+    </div>
+</div>
+<!-- Footer -->
+
+<footer class="bg-gray-950 border-t border-amber-800/40 py-10 text-center mt-auto">
+    <p class="text-lg text-gray-400">Be the Best Delegate | Skillizee.io</p>
+</footer>
+
+<div class="fixed right-4 top-1/2 -translate-y-1/2 z-50 w-3 h-64 bg-gray-700 rounded-full overflow-hidden shadow-lg">
+    <div class="bg-gradient-to-t from-amber-600 to-amber-400 w-full h-0 transition-all duration-200" id="progress"
+        style="height: 0%;">&nbsp;</div>
+</div>
+<!-- Trash Joke Popup -->
+
+<div class="fixed inset-0 bg-black/90 flex items-center justify-center z-50 hidden" id="trashJokePopup">
+    <div class="bg-gray-900 border-2 border-amber-600 rounded-2xl p-10 max-w-lg w-full text-center relative"><button
+            class="absolute top-4 right-4 text-gray-400 hover:text-white text-3xl"
+            onclick="closeTrashJoke()">&times;</button>
+
+        <h2 class="text-4xl font-bold text-amber-400 mb-8">Ba-dum-tss... 🥁</h2>
+
+        <p class="text-2xl text-gray-200 mb-6">Why did the MUN delegate bring string to the conference?<br />
+            <span class="text-amber-300 font-semibold">To tie up all the loose ends in the resolution!</span>
+        </p>
+
+        <p class="text-sm text-gray-500 italic mt-8">(yep&hellip; peak trash&hellip; now go crush that capstone 😂)</p>
+    </div>
+</div>
+<!-- Trash Sound --><!-- Course Navigation Popup (appears when scrolled to bottom) -->
+
+<div class="fixed inset-0 bg-black/85 flex items-center justify-center z-[1000] opacity-0 pointer-events-none transition-opacity duration-1000"
+    id="courseNavPopup">
+    <div
+        class="bg-gray-900/95 border-4 border-amber-600/70 rounded-2xl p-8 md:p-12 max-w-4xl w-[90%] text-center relative shadow-2xl overflow-hidden">
+        <!-- Close button (optional – in case user wants to close early) --><button
+            class="absolute top-4 right-4 text-amber-300 hover:text-white text-3xl font-bold z-10"
+            onclick="closeCoursePopup()">&times;</button><!-- Title -->
+
+        <h2 class="text-3xl md:text-4xl font-bold text-amber-400 mb-6 glow-text">Course Navigation Guide</h2>
+        <!-- GIF container -->
+
+        <div class="mb-6"><img alt="Course Navigation Animation"
+                class="w-full max-h-[500px] mx-auto rounded-xl shadow-2xl object-contain" id="navGif"
+                src="/s/articles/6981db4d405cca15a7e3aba0/images/SBPL.gif" /></div>
+        <!-- Optional subtitle -->
+
+        <p class="text-lg text-gray-300">Use the sidebar or table of contents to jump between modules and chapters.</p>
+    </div>
+</div>
+<!-- JavaScript to show popup when scrolled to bottom -->
+<script>
+    // Function to close popup manually (if user clicks ×)
+    function closeCoursePopup() {
+        const popup = document.getElementById('courseNavPopup');
+        popup.style.opacity = '0';
+        setTimeout(() => {
+            popup.classList.add('pointer-events-none');
+        }, 1000);
+    }
+
+    // Show popup only once when user reaches bottom
+    let popupShown = false;
+
+    window.addEventListener('scroll', () => {
+        if (popupShown) return;
+
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const pageHeight = document.documentElement.scrollHeight;
+
+        // Trigger when user is within 50px of the bottom
+        if (scrollPosition >= pageHeight - 50) {
+            popupShown = true;
+            const popup = document.getElementById('courseNavPopup');
+
+            // Show popup
+            popup.classList.remove('pointer-events-none');
+            popup.style.opacity = '1';
+
+            // Auto-hide after 14 seconds (GIF duration)
+            setTimeout(() => {
+                popup.style.opacity = '0';
+                setTimeout(() => {
+                    popup.classList.add('pointer-events-none');
+                }, 1000);
+            }, 14000);
+        }
+    });
+</script>
+
+<p>
+    <audio id="trashSound" src="https://pa2-cmd.github.io/MUN/fffff.mp3">&nbsp;</audio>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fullscreenBtn = document.getElementById('fullscreenBtn');
+
+            fullscreenBtn.addEventListener('click', () => {
+                if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen();
+                } else {
+                    document.exitFullscreen();
+                }
+            });
+
+            // Intro – always show on load/refresh
+            const intro = document.getElementById('intro');
+            const main = document.getElementById('main-content');
+
+            intro.style.display = 'flex';
+            main.classList.remove('visible');
+
+            setTimeout(() => {
+                intro.classList.add('hidden');
+                setTimeout(() => {
+                    intro.style.display = 'none';
+                    main.classList.add('visible');
+                }, 1800);
+            }, 8000);
+        });
+        // Intro Music Control
+        const introMusic = document.getElementById('introMusic');
+        if (introMusic) {
+            introMusic.volume = 0.25;
+            introMusic.loop = false;
+
+            window.addEventListener('load', () => {
+                introMusic.play().catch(() => {
+                    document.body.addEventListener('click', () => {
+                        introMusic.play();
+                    }, { once: true });
+                });
+
+                setTimeout(() => {
+                    introMusic.pause();
+                    introMusic.currentTime = 0;
+                }, 8000);
+            });
+        }
+
+        // Progress bar
+        window.addEventListener('scroll', () => {
+            const scroll = window.scrollY;
+            const total = document.documentElement.scrollHeight - window.innerHeight;
+            const percent = (scroll / total) * 100;
+            document.getElementById('progress').style.height = percent + '%';
+        });
+    </script>
+</p>
