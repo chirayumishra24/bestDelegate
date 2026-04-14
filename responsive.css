@@ -89,12 +89,6 @@ body .aspect-video {
     max-width: 100%;
 }
 
-body .aspect-video > iframe,
-body iframe.aspect-video {
-    width: 100% !important;
-    height: 100% !important;
-}
-
 body .heading-overlay,
 body .header-overlay,
 body .section-overlay {
