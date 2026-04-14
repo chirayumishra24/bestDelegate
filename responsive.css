@@ -37,6 +37,8 @@ body svg {
 }
 
 body iframe {
+    aspect-ratio: 16 / 9 !important;
+    height: auto !important;
     width: 100% !important;
     max-width: 100% !important;
 }
